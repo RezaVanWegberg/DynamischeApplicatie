@@ -1,6 +1,6 @@
 <?php 
     require "get_alles.php";
-    $aantalCharacters = getAlles();
+    $alleCharacters = getAlles();
 ?>
 
 
@@ -14,16 +14,17 @@
     <link href="resources/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-<header><h1>Alle <?= count($aantalCharacters) ?> characters uit de database</h1>
+<header><h1>Alle <?= count($alleCharacters) ?> characters uit de database</h1>
 
 </header>
 <div id="container">
+    <?php foreach($alleCharacters as $character){ ?>
     <a class="item" href="character.html">
         <div class="left">
             <img class="avatar" src="resources/images/bowser.jpg">
         </div>
         <div class="right">
-            <h2>Bowser</h2>
+            <h2><?= $character["name"]; ?></h2>
             <div class="stats">
                 <ul class="fa-ul">
                     <li><span class="fa-li"><i class="fas fa-heart"></i></span> 10000</li>
@@ -34,6 +35,7 @@
         </div>
         <div class="detailButton"><i class="fas fa-search"></i> bekijk</div>
     </a>
+    <?php } ?>
 </div>
 <footer>&copy; Reza van Wegberg 2023</footer>
 </body>
