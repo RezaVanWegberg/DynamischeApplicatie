@@ -19,9 +19,9 @@
 </header>
 <div id="container">
     <?php foreach($alleCharacters as $character){ ?>
-    <a class="item" href="character.html">
+    <a class="item" href="character.php">
         <div class="left">
-            <img class="avatar" src="resources/images/bowser.jpg">
+            <img class="avatar" src="resources/images/<?=$character["avatar"]?>">
         </div>
         <div class="right">
             <h2><?= $character["name"]; ?></h2>
