@@ -19,7 +19,7 @@
 </header>
 <div id="container">
     <?php foreach($alleCharacters as $character){ ?>
-    <a class="item" href="character.php">
+    <a class="item" href="character.php?id=<?=$character["id"]?>">
         <div class="left">
             <img class="avatar" src="resources/images/<?=$character["avatar"]?>">
         </div>

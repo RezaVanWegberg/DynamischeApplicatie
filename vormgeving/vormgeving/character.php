@@ -1,3 +1,10 @@
+<?php 
+    require "get_alles.php";
+    $alleCharacters = getAlles();
+    $id = $_GET["id"] - 1;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +14,8 @@
     <link href="resources/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-<header><h1>Bowser</h1>
-    <a class="backbutton" href="index.html"><i class="fas fa-long-arrow-alt-left"></i> Terug</a></header>
+<header><h1><?= $alleCharacters[$id]['name']?></h1>
+    <a class="backbutton" href="index.php"><i class="fas fa-long-arrow-alt-left"></i> Terug</a></header>
 <div id="container">
     <div class="detail">
         <div class="left">
@@ -42,6 +49,6 @@
         <div style="clear: both"></div>
     </div>
 </div>
-<footer>&copy; [jenaam] 2023</footer>
+<footer>&copy; Reza van Wegberg 2023</footer>
 </body>
 </html>
