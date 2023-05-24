@@ -27,9 +27,9 @@
             <h2><?= $character["name"]; ?></h2>
             <div class="stats">
                 <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-heart"></i></span> 10000</li>
-                    <li><span class="fa-li"><i class="fas fa-fist-raised"></i></span> 400</li>
-                    <li><span class="fa-li"><i class="fas fa-shield-alt"></i></span> 100</li>
+                    <li><span class="fa-li"><i class="fas fa-heart"></i></span> <?=$character["health"]?></li>
+                    <li><span class="fa-li"><i class="fas fa-fist-raised"></i></span> <?=$character["attack"]?></li>
+                    <li><span class="fa-li"><i class="fas fa-shield-alt"></i></span> <?=$character["defense"]?></li>
                 </ul>
             </div>
         </div>
