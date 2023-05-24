@@ -1,3 +1,10 @@
+<?php 
+    require "get_alles.php";
+    $aantalCharacters = getAlles();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +14,7 @@
     <link href="resources/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-<header><h1>Alle [X] characters uit de database</h1>
+<header><h1>Alle <?= count($aantalCharacters) ?> characters uit de database</h1>
 
 </header>
 <div id="container">
@@ -28,6 +35,6 @@
         <div class="detailButton"><i class="fas fa-search"></i> bekijk</div>
     </a>
 </div>
-<footer>&copy; [jenaam] 2023</footer>
+<footer>&copy; Reza van Wegberg 2023</footer>
 </body>
 </html>
